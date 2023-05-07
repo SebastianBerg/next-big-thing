@@ -14,8 +14,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="overflow-x-hidden max-w-[100vw]">
-        <nav className="sticky top-0 z-50 px-8 py-4 text-white font-serif bg-black">
-          <Link href="/" className="mr-4 shadow-white">
+        <nav className="sticky top-0 z-50 px-8 h-[60px] flex items-center text-white font-sans bg-black text-lg font-thin">
+          <Link href="/" className="mr-16 shadow-white">
             Home
           </Link>
           <Link href="/product/cool-shirt">Product </Link>
