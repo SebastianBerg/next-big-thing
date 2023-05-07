@@ -1,5 +1,5 @@
 import Link from "next/link";
-import "../styles/output.css";
+import "./globals.css";
 
 export const metadata = {
   title: "Create Next App2",
@@ -15,7 +15,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="overflow-x-hidden max-w-[100vw]">
         <nav className="sticky top-0 z-50 px-8 py-4 text-white font-serif bg-black">
-          <Link href="/" className="mr-4">
+          <Link href="/" className="mr-4 shadow-white">
             Home
           </Link>
           <Link href="/product/cool-shirt">Product </Link>
