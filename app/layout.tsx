@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "../styles/output.css";
 
 export const metadata = {
@@ -12,8 +13,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <nav>Menu</nav>
+      <body className="overflow-x-hidden max-w-[100vw]">
+        <nav className="sticky top-0 z-50 px-8 py-4 text-white font-serif bg-black">
+          <Link href="/" className="mr-4">
+            Home
+          </Link>
+          <Link href="/product/cool-shirt">Product </Link>
+        </nav>
         {children}
       </body>
     </html>

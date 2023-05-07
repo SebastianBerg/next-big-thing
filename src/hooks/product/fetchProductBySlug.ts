@@ -11,5 +11,5 @@ export const fetchProductBySlug = async (
       slug,
     },
   });
-  return res.data.productsCollection.items[0];
+  return res?.data?.productsCollection?.items[0];
 };

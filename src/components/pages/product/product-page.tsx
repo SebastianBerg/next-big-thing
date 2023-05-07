@@ -1,6 +1,5 @@
 import { fetchProductBySlug } from "@/hooks/product/fetchProductBySlug";
 import { getApolloClient } from "../../../../api/apollo/apolloClient";
-import { FunctionComponent } from "react";
 
 interface IProductPageProps {
   params: {
@@ -10,8 +9,13 @@ interface IProductPageProps {
 
 export default async function ProductPage({ params }: IProductPageProps) {
   const product = await fetchProductBySlug(apolloClient, params.slug);
-  console.log(product, "product", params, "params");
-  return <div>{product?.name}</div>;
+  return (
+    <div className="w-screen h-screen">
+      <div className="m-auto w-[50vw]">
+        <h1 className="text-6xl mt-8 text-center">{product?.name}</h1>
+      </div>
+    </div>
+  );
 }
 
 const apolloClient = getApolloClient();

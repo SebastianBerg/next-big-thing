@@ -23,7 +23,6 @@ export const revalidate = 5;
 
 export const generateStaticParams = async () => {
   const paths = await createProductPagePaths(apolloClient);
-  console.log(paths, "paths");
   return [
     {
       paths,
